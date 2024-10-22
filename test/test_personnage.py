@@ -1,8 +1,13 @@
 import unittest
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
+from personnage import Personnage
+
+
+class PersonnageTest(unittest.TestCase):
+    def test_dix_hp_origine(self):
+        personnage = Personnage()
+        self.assertEqual(10, personnage.get_points_de_vie())
+
 
 if __name__ == '__main__':
     unittest.main()
